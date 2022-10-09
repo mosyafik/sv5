@@ -173,10 +173,10 @@ let welc = `
 –––┅┅ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ* ┅┅––––––
 @desc
 
-Script My Bot : https://youtube.com/channel/UCjoPsysjCn2Qa0dRalUb2mg`
+*вσтѕнιη ν3*`
 let lef = 
 `❖━━━[ *나중에 봐요* ]━━━❖
-𝚂𝚊𝚢𝚘𝚗𝚊𝚛𝚊𝚊 *@user* 👋😃`
+Dadaaahhh *@user* selamat jalan 👋😃`
 
   conn.welcome = welc
   conn.bye = lef
