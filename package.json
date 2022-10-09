@@ -1,6 +1,6 @@
 {
-    "name": "Aldi x aisyah",
-    "version": "3.0.0",
+    "name": "BotShin v3",
+    "version": "3.3.0",
     "description": "WhatsApp BOT By Aldi",
     "main": "index.js",
     "type": "module",
