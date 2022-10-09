@@ -45,18 +45,18 @@ try {
   const url = 'https://www.youtube.com/watch?v=' + videoId
   let whmodsdev = `*${htki} PLAY ${htka}*
 
-  📌 *Title:* ${title}
+  📌 *Judul:* ${title}
 🔗 *Url:* ${url}
-📔 *Description:* ${description}
+📔 *Deskripsi:* ${description}
 
-⏲️ *Published:* ${publishedTime}
-⌚ *Duration:* ${durationH}
-👁️ *Views:* ${viewH}
+⏲️ *Diterbitkan:* ${publishedTime}
+⌚ *Durasi:* ${durationH}
+👁️ *Total Viewers:* ${viewH}
   `
   await conn.sendButton(m.chat, whmodsdev, wm, botdate, [
-    ['🎶 Audio', `${usedPrefix}yta ${url} yes`],
-    ['🎥 Video', `${usedPrefix}ytv ${url} yes`],
-    ['🔎 Youtube Search', `${usedPrefix}yts ${text}`]
+    ['🎶 *Audio*', `${usedPrefix}yta ${url} yes`],
+    ['🎥 *Video*', `${usedPrefix}ytv ${url} yes`],
+    ['🔎 *Pencarian Terkait*', `${usedPrefix}yts ${text}`]
 ], m, fdoc)
 } catch {
 if (!text) throw 'Input Query'
@@ -67,22 +67,22 @@ if (!text) throw 'Input Query'
   let ytLink = `https://yt-downloader.akkun3704.repl.co/?url=${url}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`
   let capt = `*${htki} PLAY ${htka}*
 
-  📌 *Title:* ${title}
+  📌 *Judul:* ${title}
 🔗 *Url:* ${url}
-📔 *Description:* ${description}
+📔 *Deskripsi:* ${description}
 
-⏲️ *Published:* ${publishedTime}
-⌚ *Duration:* ${durationH}
-👁️ *Views:* ${viewH}
+⏲️ *Diterbitkan:* ${publishedTime}
+⌚ *Durasi:* ${durationH}
+👁️ *Total Viewers:* ${viewH}
   `
-  let buttons = [{ buttonText: { displayText: '🎶 Audio/Vn' }, buttonId: `${usedPrefix}yta ${url}` }, { buttonText: { displayText: '🎥 Video' }, buttonId: `${usedPrefix}ytv ${url}` }, { buttonText: { displayText: '🔎 Youtube Search' }, buttonId: `${usedPrefix}yts ${text}` }]
+  let buttons = [{ buttonText: { displayText: '🎶 *Audio Vn*' }, buttonId: `${usedPrefix}yta ${url}` }, { buttonText: { displayText: '🎥 *Video*' }, buttonId: `${usedPrefix}ytv ${url}` }, { buttonText: { displayText: '🔎 Youtube Search' }, buttonId: `${usedPrefix}yts ${text}` }]
   let msg = await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: capt, footer: '_Audio on progress..._', buttons }, { quoted: m })
   // if (durationS > 4000) return conn.sendMessage(m.chat, { text: `*Download:* ${await shortUrl(ytLink)}\n\n_Duration too long..._` }, { quoted: msg })
   conn.sendMessage(m.chat, { audio: { url: ytLink }, mimetype: 'audio/mpeg' }, { quoted: msg })
 }
 
 }
-handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
+handler.help = ['p','play', 'play2'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader', 'limitmenu']
 handler.command = /^play2?$/i
 
