@@ -203,17 +203,17 @@ let gktau = gk[Math.floor(Math.random() * gk.length)]
     }, 1000)
     }
 //Respond omagad
-   let omagad = /(wow|keren|bagus|GG|sepuh|king|lord|gilak|gila|parah)/i
-    let omoma = omagad.exec(m.text)
-    if (omoma && !m.fromMe) {
-    let omom = fs.readFileSync('./mp3/omagad')
+   let mimpimya = /(wow|keren|hebat|GG|Gila|parah|king|lord|sepuh|jago)/i
+    let ismim = mimpimya.exec(m.text)
+    if (ismim && !m.fromMe) {
+    let mimi = fs.readFileSync('./mp3/omagad')
     conn.sendMessage(m.chat, {
         react: {
           text: em.getRandom(),
           key: m.key,
         }})
     setTimeout(() => {
-    conn.sendFile(m.chat, omom, '', '', m, true)
+    conn.sendFile(m.chat, mimi, '', '', m, true)
     }, 1000)
     }
     //Respond apaantuh
