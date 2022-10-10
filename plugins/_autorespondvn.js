@@ -202,6 +202,20 @@ let gktau = gk[Math.floor(Math.random() * gk.length)]
     conn.sendFile(m.chat, mimi, '', '', m, true)
     }, 1000)
     }
+//Respond omagad
+   let omagad = /(wow|keren|bagus|GG|sepuh|king|lord|gilak|gila|parah)/i
+    let omoma = omagad.exec(m.text)
+    if (omoma && !m.fromMe) {
+    let omom = fs.readFileSync('./mp3/omagad')
+    conn.sendMessage(m.chat, {
+        react: {
+          text: em.getRandom(),
+          key: m.key,
+        }})
+    setTimeout(() => {
+    conn.sendFile(m.chat, omom, '', '', m, true)
+    }, 1000)
+    }
     //Respond apaantuh
    let taaggowner = /(6281361281833)/i
     let isown = taaggowner.exec(m.text)
